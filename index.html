@@ -9,7 +9,14 @@
   </head>
   <body>
     <h1>Cat API Example</h1>
-    <button id="fetch-random">Random Cat</button>
+    <div class="forms-container">
+      <button id="fetch-random">Get Random Cat</button>
+      <form>
+        <label for="breed">Breed</label>
+        <input type="text" id="breed" />
+        <button type="submit">Get Cat By Breed</button>
+      </form>
+    </div>
     <div id="cat-container"></div>
   </body>
 </html>
