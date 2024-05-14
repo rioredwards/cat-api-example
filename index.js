@@ -13,8 +13,13 @@ fetch(url)
   .then((data) => {
     console.log(data[0].breeds[0].name);
 
+    const catBreedName = document.createElement("h2");
+    catBreedName.innerText = data[0].breeds[0].name;
+
     const catImg = document.createElement("img");
     catImg.src = data[0].url;
+
+    catContainer.appendChild(catBreedName);
     catContainer.appendChild(catImg);
   })
   .catch((error) => {
