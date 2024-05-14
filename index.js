@@ -11,15 +11,19 @@ fetch(url)
     return res.json();
   })
   .then((data) => {
-    console.log(data[0].breeds[0].name);
+    console.log(data[0].breeds[0]);
 
     const catBreedName = document.createElement("h2");
     catBreedName.innerText = data[0].breeds[0].name;
+
+    const catBreedDescription = document.createElement("p");
+    catBreedDescription.innerText = data[0].breeds[0].description;
 
     const catImg = document.createElement("img");
     catImg.src = data[0].url;
 
     catContainer.appendChild(catBreedName);
+    catContainer.appendChild(catBreedDescription);
     catContainer.appendChild(catImg);
   })
   .catch((error) => {
